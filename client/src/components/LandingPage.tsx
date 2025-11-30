@@ -7,27 +7,17 @@ export default function LandingPage() {
   return (
     <div className="min-h-screen flex flex-col lg:flex-row">
       <div 
-        className="hidden lg:flex lg:w-[45%] bg-gradient-to-br from-green-50 to-green-100 dark:from-green-950/30 dark:to-green-900/20 items-center justify-center p-12"
+        className="hidden lg:block lg:w-[45%] bg-gradient-to-br from-green-50 to-green-100 dark:from-green-950/30 dark:to-green-900/20 relative"
         aria-hidden="true"
       >
-        <div className="max-w-md">
-          <img
-            src={mapImage}
-            alt="Nigeria map illustration"
-            className="w-full h-auto object-contain drop-shadow-lg"
-          />
-        </div>
+        <img
+          src={mapImage}
+          alt="Nigeria map illustration"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
       </div>
 
       <div className="flex-1 flex flex-col min-h-screen lg:min-h-0">
-        <div className="lg:hidden bg-gradient-to-br from-green-50 to-green-100 dark:from-green-950/30 dark:to-green-900/20 p-8 flex justify-center">
-          <img
-            src={mapImage}
-            alt="Nigeria map illustration"
-            className="w-40 h-40 object-contain"
-          />
-        </div>
-
         <main className="flex-1 flex items-center justify-center p-6 lg:p-12">
           <div className="w-full max-w-md space-y-8">
             <div className="text-center space-y-4">
