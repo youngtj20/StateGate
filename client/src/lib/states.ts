@@ -1,0 +1,45 @@
+export interface NigerianState {
+  name: string;
+  slug: string;
+  url: string;
+}
+
+export const nigerianStates: NigerianState[] = [
+  { name: "Abia State", slug: "abia", url: "https://abia.lgpoa.ng" },
+  { name: "Adamawa State", slug: "adamawa", url: "https://adamawa.lgpoa.ng" },
+  { name: "Akwa Ibom State", slug: "akwa-ibom", url: "https://akwaibom.lgpoa.ng" },
+  { name: "Anambra State", slug: "anambra", url: "https://anambra.lgpoa.ng" },
+  { name: "Bauchi State", slug: "bauchi", url: "https://bauchi.lgpoa.ng" },
+  { name: "Bayelsa State", slug: "bayelsa", url: "https://bayelsa.lgpoa.ng" },
+  { name: "Benue State", slug: "benue", url: "https://benue.lgpoa.ng" },
+  { name: "Borno State", slug: "borno", url: "https://borno.lgpoa.ng" },
+  { name: "Cross River State", slug: "cross-river", url: "https://crossriver.lgpoa.ng" },
+  { name: "Delta State", slug: "delta", url: "https://delta.lgpoa.ng" },
+  { name: "Ebonyi State", slug: "ebonyi", url: "https://ebonyi.lgpoa.ng" },
+  { name: "Edo State", slug: "edo", url: "https://edo.lgpoa.ng" },
+  { name: "Ekiti State", slug: "ekiti", url: "https://ekiti.lgpoa.ng" },
+  { name: "Enugu State", slug: "enugu", url: "https://enugu.lgpoa.ng" },
+  { name: "Federal Capital Territory", slug: "fct", url: "https://fct.lgpoa.ng" },
+  { name: "Gombe State", slug: "gombe", url: "https://gombe.lgpoa.ng" },
+  { name: "Imo State", slug: "imo", url: "https://imo.lgpoa.ng" },
+  { name: "Jigawa State", slug: "jigawa", url: "https://jigawa.lgpoa.ng" },
+  { name: "Kaduna State", slug: "kaduna", url: "https://kaduna.lgpoa.ng" },
+  { name: "Kano State", slug: "kano", url: "https://kano.lgpoa.ng" },
+  { name: "Katsina State", slug: "katsina", url: "https://katsina.lgpoa.ng" },
+  { name: "Kebbi State", slug: "kebbi", url: "https://kebbi.lgpoa.ng" },
+  { name: "Kogi State", slug: "kogi", url: "https://kogi.lgpoa.ng" },
+  { name: "Kwara State", slug: "kwara", url: "https://kwara.lgpoa.ng" },
+  { name: "Lagos State", slug: "lagos", url: "https://lagos.lgpoa.ng" },
+  { name: "Nasarawa State", slug: "nasarawa", url: "https://nasarawa.lgpoa.ng" },
+  { name: "Niger State", slug: "niger", url: "https://niger.lgpoa.ng" },
+  { name: "Ogun State", slug: "ogun", url: "https://ogun.lgpoa.ng" },
+  { name: "Ondo State", slug: "ondo", url: "https://ondo.lgpoa.ng" },
+  { name: "Osun State", slug: "osun", url: "https://osun.lgpoa.ng" },
+  { name: "Oyo State", slug: "oyo", url: "https://oyo.lgpoa.ng" },
+  { name: "Plateau State", slug: "plateau", url: "https://plateau.lgpoa.ng" },
+  { name: "Rivers State", slug: "rivers", url: "https://rivers.lgpoa.ng" },
+  { name: "Sokoto State", slug: "sokoto", url: "https://sokoto.lgpoa.ng" },
+  { name: "Taraba State", slug: "taraba", url: "https://taraba.lgpoa.ng" },
+  { name: "Yobe State", slug: "yobe", url: "https://yobe.lgpoa.ng" },
+  { name: "Zamfara State", slug: "zamfara", url: "https://zamfara.lgpoa.ng" },
+];
