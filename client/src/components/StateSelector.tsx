@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { useLocation } from "wouter";
 import { Check, ChevronsUpDown, Loader2, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -26,7 +25,6 @@ export default function StateSelector({ onStateSelect }: StateSelectorProps) {
   const [open, setOpen] = useState(false);
   const [selectedState, setSelectedState] = useState<NigerianState | null>(null);
   const [isNavigating, setIsNavigating] = useState(false);
-  const [, setLocation] = useLocation();
 
   const handleSelect = (state: NigerianState) => {
     setSelectedState(state);
@@ -40,7 +38,7 @@ export default function StateSelector({ onStateSelect }: StateSelectorProps) {
     setIsNavigating(true);
     
     setTimeout(() => {
-      setLocation(selectedState.path);
+      window.location.assign(selectedState.path);
     }, 300);
   };
 

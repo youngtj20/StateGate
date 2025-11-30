@@ -69,8 +69,6 @@ export async function registerRoutes(
           proxyReq.setHeader("X-Forwarded-Proto", "https");
         },
         proxyRes: (proxyRes) => {
-          delete proxyRes.headers["x-frame-options"];
-          
           if (proxyRes.headers["set-cookie"]) {
             proxyRes.headers["set-cookie"] = (proxyRes.headers["set-cookie"] as string[]).map(
               (cookie: string) => cookie.replace(/domain=[^;]+;?/gi, "")
