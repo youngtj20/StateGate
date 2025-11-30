@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useLocation } from "wouter";
 import { Check, ChevronsUpDown, Loader2, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -24,7 +25,8 @@ interface StateSelectorProps {
 export default function StateSelector({ onStateSelect }: StateSelectorProps) {
   const [open, setOpen] = useState(false);
   const [selectedState, setSelectedState] = useState<NigerianState | null>(null);
-  const [isRedirecting, setIsRedirecting] = useState(false);
+  const [isNavigating, setIsNavigating] = useState(false);
+  const [, setLocation] = useLocation();
 
   const handleSelect = (state: NigerianState) => {
     setSelectedState(state);
@@ -35,11 +37,11 @@ export default function StateSelector({ onStateSelect }: StateSelectorProps) {
   const handleContinue = () => {
     if (!selectedState) return;
     
-    setIsRedirecting(true);
+    setIsNavigating(true);
     
     setTimeout(() => {
-      window.location.href = selectedState.url;
-    }, 800);
+      setLocation(selectedState.path);
+    }, 300);
   };
 
   return (
@@ -107,20 +109,20 @@ export default function StateSelector({ onStateSelect }: StateSelectorProps) {
           </PopoverContent>
         </Popover>
         <p className="text-xs text-muted-foreground">
-          You will be redirected to your state's login portal
+          You will be taken to your state's login portal
         </p>
       </div>
 
       <Button
         onClick={handleContinue}
-        disabled={!selectedState || isRedirecting}
+        disabled={!selectedState || isNavigating}
         className="w-full h-14 text-base font-semibold"
         data-testid="button-continue"
       >
-        {isRedirecting ? (
+        {isNavigating ? (
           <>
             <Loader2 className="mr-2 h-5 w-5 animate-spin" />
-            Redirecting to {selectedState?.name}...
+            Loading {selectedState?.name}...
           </>
         ) : selectedState ? (
           `Continue to ${selectedState.name.replace(" State", "")} Login`
