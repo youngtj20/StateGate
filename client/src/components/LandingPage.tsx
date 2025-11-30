@@ -1,6 +1,7 @@
 import { Shield } from "lucide-react";
 import StateSelector from "./StateSelector";
 import mapImage from "@assets/generated_images/folded_map_with_location_pin.png";
+import logoImage from "@assets/image_1764527052979.png";
 
 export default function LandingPage() {
   return (
@@ -31,18 +32,12 @@ export default function LandingPage() {
           <div className="w-full max-w-md space-y-8">
             <div className="text-center space-y-4">
               <div className="flex justify-center">
-                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-green-600 to-green-700 flex items-center justify-center shadow-lg">
-                  <Shield className="w-10 h-10 text-white" />
-                </div>
-              </div>
-              
-              <div className="space-y-1">
-                <h1 className="text-2xl font-bold tracking-tight text-foreground" data-testid="text-heading">
-                  KNOW YOUR CITIZENS
-                </h1>
-                <p className="text-lg font-semibold text-primary" data-testid="text-subheading">
-                  TECHNOLOGY
-                </p>
+                <img
+                  src={logoImage}
+                  alt="Know Your Citizens Technology Logo"
+                  className="h-20 w-auto object-contain"
+                  data-testid="img-logo"
+                />
               </div>
             </div>
 
