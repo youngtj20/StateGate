@@ -50,7 +50,7 @@ export default function LandingPage() {
 
         <footer className="p-4 text-center border-t border-border">
           <p className="text-xs text-muted-foreground" data-testid="text-footer">
-            LGPOA - Local Government Pension Officers Association
+            LGPOA - Local Government Proof of Address
           </p>
           <p className="text-xs text-muted-foreground mt-1">
             For support, contact your state administrator
