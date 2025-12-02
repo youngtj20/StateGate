@@ -4,7 +4,6 @@ import { type Server } from "http";
 import viteConfig from "../vite.config";
 import fs from "fs";
 import path from "path";
-import { nanoid } from "nanoid";
 
 const viteLogger = createLogger();
 
@@ -34,6 +33,11 @@ export async function setupVite(server: Server, app: Express) {
   app.use("*", async (req, res, next) => {
     const url = req.originalUrl;
 
+    // Skip Vite for proxy routes
+    if (url.startsWith("/state/") || url.startsWith("/api/")) {
+      return next();
+    }
+
     try {
       const clientTemplate = path.resolve(
         import.meta.dirname,
@@ -46,7 +50,7 @@ export async function setupVite(server: Server, app: Express) {
       let template = await fs.promises.readFile(clientTemplate, "utf-8");
       template = template.replace(
         `src="/src/main.tsx"`,
-        `src="/src/main.tsx?v=${nanoid()}"`,
+        `src="/src/main.tsx?v=${Date.now()}"`,
       );
       const page = await vite.transformIndexHtml(url, template);
       res.status(200).set({ "Content-Type": "text/html" }).end(page);

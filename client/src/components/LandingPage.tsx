@@ -7,7 +7,7 @@ export default function LandingPage() {
   return (
     <div className="min-h-screen flex flex-col lg:flex-row">
       <div 
-        className="hidden lg:block lg:w-[45%] bg-gradient-to-br from-green-50 to-green-100 dark:from-green-950/30 dark:to-green-900/20 relative"
+        className="hidden lg:block lg:w-[60%] bg-gradient-to-br from-green-50 to-green-100 dark:from-green-950/30 dark:to-green-900/20 relative"
         aria-hidden="true"
       >
         <img
@@ -19,7 +19,7 @@ export default function LandingPage() {
 
       <div className="flex-1 flex flex-col min-h-screen lg:min-h-0">
         <main className="flex-1 flex items-center justify-center p-6 lg:p-12">
-          <div className="w-full max-w-md space-y-8">
+          <div className="w-full max-w-sm space-y-8">
             <div className="text-center space-y-4">
               <div className="flex justify-center">
                 <img
